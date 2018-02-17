@@ -42,7 +42,7 @@ class DownloadService : IntentService(DownloadService::class.java.name) {
     }
 
     @Throws(IOException::class, DownloadException::class)
-    private fun downloadData(requestUrl:String){
+    private fun downloadData(requestUrl:String): List<String?>{
         var inputStream:InputStream?
         var urlConnection: HttpURLConnection?
         var url = URL(requestUrl)
